@@ -23,7 +23,17 @@ class _AddPageState extends State<AddPage> {
       child: BlocListener<AddCubit, AddState>(
         listener: (context, state) {
           if (state.saved) {
+            // znika ekran dodawania po dodaniu i zatwierdzeniu
             Navigator.of(context).pop();
+          }
+          if (state.errorMessage.isNotEmpty) {
+            //pokazuje błąd za pomocą snackbara
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text(state.errorMessage),
+                backgroundColor: Colors.redAccent,
+              ),
+            );
           }
         },
         child: BlocBuilder<AddCubit, AddState>(
