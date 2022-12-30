@@ -9,13 +9,14 @@ environment:
   sdk: ">=2.15.0 <3.0.0"
 
 dependencies:
-  cloud_firestore: ^3.1.6
+  cloud_firestore: ^4.0.2
 
-  firebase_core: ^1.11.0
+  firebase_core: ^2.1.0
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
-  intl: ^0.18.0
+  flutterfire_ui: <0.4.3+18
+  intl: ^0.17.0
 
 dev_dependencies:
 
