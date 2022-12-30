@@ -1,6 +1,8 @@
 //Plik ItemModel odpowiada za wszystkie zmienne jakie mają miejsce w reszcie plików
 
 //class odpowiedzialna za wszystkie zmienne w plikach
+import 'package:intl/intl.dart';
+
 class ItemModel {
   ItemModel({
     //constructor
@@ -19,5 +21,9 @@ class ItemModel {
   //methods- zczytuje ile dni zostało
   String daysleft() {
     return relaseDate.difference(DateTime.now()).inDays.toString();
+  }
+
+  String relaseDateFormatted() {
+    return DateFormat.yMMMEd().format(relaseDate);
   }
 }
